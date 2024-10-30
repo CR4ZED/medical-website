@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Adva</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">
+                Medical Advance
+            </a>
+            <div class="desktop-nav">
+                <div class="left">
+                    <ul class="nav-links">
+                        <div class="link-wrapper">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Product</a>
+                            </li>
+                            <li>
+                                <a href="#">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="right">
+                    <a href="#">Login</a>
+                    <a href="#" class="btn-primary">
+                        JOIN US
+                        <img src="./assets/arrow-right.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="mobile-nav">
+                <button class="hamburger" id="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
+                <div class="mobile-menu">
+                    <ul class="nav-links">
+                        <div class="link-wrapper">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Product</a>
+                            </li>
+                            <li>
+                                <a href="#">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <div>
+                        <a href="#">Login</a>
+                        <a href="#" class="btn-primary">
+                            JOIN US
+                            <img src="./assets/arrow-right.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="container clear">
+            <div class="content">
+                <div class="left">
+                    <h5>For Better Future</h5>
+                    <h1>A Great Place To Receive Care</h1>
+                    <h4>Get your best looking smile now!</h4>
+                    <a href="#" class="btn-primary">Join Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="statistics">
+        <div class="container clear">
+            <div class="card left">
+                <h1>15K</h1>
+                <h5>Happy Customers</h5>
+            </div>
+            <div class="card left">
+                <h1>150K</h1>
+                <h5>Monthly Visitors</h5>
+            </div>
+            <div class="card left">
+                <h1>15</h1>
+                <h5>Countries Worldwide</h5>
+            </div>
+            <div class="card left">
+                <h1>100+</h1>
+                <h5>Top Partners</h5>
+            </div>
+        </div>
+    </section>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.querySelector("nav");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 0) {
+                nav.classList.add("scrolled");
+            } else {
+                nav.classList.remove("scrolled");
+            }
+        });
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            document.querySelector('.mobile-menu').classList.toggle('open');
+        })
+    </script>
+</body>
+
+</html>
